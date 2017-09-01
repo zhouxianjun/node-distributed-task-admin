@@ -116,7 +116,26 @@ export default {
                                         params.row.status === 'PAUSE' && this.recovery();
                                     }
                                 }
-                            }, params.row.status === 'PAUSE' ? '恢复' : '暂停')
+                            }, params.row.status === 'PAUSE' ? '恢复' : '暂停'),
+                            h('Button', {
+                                props: {
+                                    size: 'small',
+                                    loading: this.loadingBtn
+                                },
+                                on: {
+                                    click: async () => {
+                                        this.showAdd();
+                                        this.vo.type = params.row.type;
+                                        this.vo.maxRetryTimes = params.row.max_retry_times;
+                                        this.vo.nodeGroup = params.row.node_group;
+                                        this.vo.action = params.row.action;
+                                        this.vo.cron = params.row.cron;
+                                        this.vo.repeatCount = params.row.repeat_count;
+                                        this.vo.repeatInterval = params.row.repeat_interval;
+                                        this.vo.params = params.row.params;
+                                    }
+                                }
+                            }, '复制'),
                         ]);
                     }
                 }],

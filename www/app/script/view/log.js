@@ -26,6 +26,12 @@ export default {
             loadingBtn: false,
             table: {
                 columns: [{
+                    type: 'expand',
+                    width: 50,
+                    render: (h, params) => {
+                        return h('pre', params.row.msg);
+                    }
+                }, {
                     title: '任务ID',
                     key: 'task_id',
                     ellipsis: true,
