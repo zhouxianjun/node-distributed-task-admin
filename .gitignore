@@ -9,3 +9,4 @@ out
 gen
 logs
 /node_modules/
+/www/public/
