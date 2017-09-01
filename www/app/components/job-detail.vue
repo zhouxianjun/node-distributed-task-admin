@@ -36,16 +36,26 @@
                 <span v-html="detail.next_time ? dateFormat(detail.next_time) : ''"></span>
             </div>
         </div>
+        <div class="row">
+            <div class="col-md-6">
+                <label>参数:</label>
+                <json-view :data="detail.params"></json-view>
+            </div>
+        </div>
     </div>
 </template>
 <script>
     import Common from '../script/common';
+    import JsonView from './json-view.vue';
     export default {
         props: {
             detail: Object
         },
         methods: {
             dateFormat: Common.dateFormat
+        },
+        components: {
+            JsonView
         }
     }
 </script>
