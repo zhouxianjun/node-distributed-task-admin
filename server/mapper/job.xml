@@ -1,0 +1,14 @@
+<template>
+    <select id="selectByPage">
+        select * from dts_job where 1=1
+        {{each query}}
+            {{if $value}}
+                {{if $index != 'start_time' &amp;&amp; $index != 'end_time'}}
+                    and {{$index}} like '%{{$value}}%'
+                {{/if}}
+                {{if $index == 'start_time'}} and create_at &gt;= {{$value}} {{/if}}
+                {{if $index == 'end_time'}} and create_at &lt;= {{$value}} {{/if}}
+            {{/if}}
+        {{/each}}
+    </select>
+</template>
