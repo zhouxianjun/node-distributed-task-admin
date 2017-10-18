@@ -17,7 +17,7 @@ exports.JobStatus = [{
     name: '创建成功'
 }, {
     id: 'RUNNING',
-    name: '执行中'
+    name: '运行中'
 }, {
     id: 'PAUSE',
     name: '已暂停'
@@ -30,8 +30,14 @@ exports.JobStatus = [{
 }, {
     id: 'CANCEL',
     name: '已取消'
+}, {
+    id: 'EXECUTE',
+    name: '执行中'
 }];
 exports.LogType = [{
+    id: 'RECEIVE',
+    name: '已接收'
+}, {
     id: 'COMPLETE',
     name: '完成任务'
 }, {
@@ -43,6 +49,9 @@ exports.LogType = [{
 }, {
     id: 'CANCEL',
     name: '取消任务'
+}, {
+    id: 'RESET',
+    name: '重置执行'
 }];
 exports.LogStatus = [{
     id: 0,

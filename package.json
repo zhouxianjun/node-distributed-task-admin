@@ -32,7 +32,7 @@
     "sequelize-dao": "^1.0.6",
     "thrift": "^0.10.0",
     "tracer-logger": "^1.0.3",
-    "trc": "^1.0.6",
+    "trc": "^1.0.7",
     "underscore": "^1.8.3",
     "vue-router": "^2.7.0",
     "walk": "^2.3.9"
